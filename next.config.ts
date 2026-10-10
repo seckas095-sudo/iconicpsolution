@@ -3,8 +3,8 @@ import path from "node:path";
 
 const projectRoot = path.resolve(".");
 const isGithubPages = process.env.GITHUB_PAGES === "true";
-// This must match the existing GitHub repository name until that repository is renamed.
-const githubPagesBasePath = "/iconic-placo";
+// Match the repository name used by the GitHub Pages deployment.
+const githubPagesBasePath = "/iconicpsolution";
 
 const nextConfig: NextConfig = {
   ...(isGithubPages
