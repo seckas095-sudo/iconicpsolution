@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { assetPath } from "@/lib/assetPath";
 import { siteConfig } from "@/lib/siteConfig";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600"],
+const cormorant = localFont({
+  src: "./fonts/cormorant-garamond-variable.ttf",
+  weight: "300 700",
+  display: "swap",
+  adjustFontFallback: "Times New Roman",
   variable: "--font-display",
 });
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const manrope = localFont({
+  src: "./fonts/manrope-variable.ttf",
+  weight: "200 800",
+  display: "swap",
   variable: "--font-body",
 });
 
