@@ -40,6 +40,12 @@ jobs:
       - name: Disable Jekyll
         run: touch out/.nojekyll
 
+      - name: Preserve custom domain
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME out/CNAME
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
